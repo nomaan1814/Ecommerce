@@ -4,6 +4,8 @@ import AdminLogin from '../screens/Auth/AdminLogin';
 import Products from "../screens/Dashboard/Products";
 import Private from "./Private";
 import Public from "./Public";
+import Categories from "../screens/Dashboard/Categories";
+import CreateCategory from "../screens/Dashboard/CreateCategory";
 
 const Routing = () => {
   return (
@@ -14,6 +16,8 @@ const Routing = () => {
             </Route>
             <Route path="dashboard">
                   <Route path="products" element={<Private><Products /></Private>}/>
+                  <Route path="categories" element={<Private><Categories /></Private>}/>
+                  <Route path="create-category" element={<Private><CreateCategory /></Private>}/>
             </Route>
         </Routes>
     </BrowserRouter>
