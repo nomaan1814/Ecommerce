@@ -40,10 +40,10 @@ const AdminLogin = () => {
                    </div>
              )) }
              <div className='mb-4'>
-                 <input type="email" name='email' className='w-full bg-black1 p-4 rounded outline-none text-white' placeholder='Enter Email...' onChange={handleInputs} value={state.email}/>
+                 <input type="email" name='email' autoComplete='off' className='w-full bg-black1 p-4 rounded outline-none text-white' placeholder='Enter Email...' onChange={handleInputs} value={state.email}/>
              </div>
              <div className='mb-4'>
-                 <input type="password" name='password' className='w-full bg-black1 p-4 rounded outline-none text-white' placeholder='Enter Password...' onChange={handleInputs} value={state.password}/>
+                 <input type="password" name='password' autoComplete='off' className='w-full bg-black1 p-4 rounded outline-none text-white' placeholder='Enter Password...' onChange={handleInputs} value={state.password}/>
              </div>
              <div className="mb-4">
                 <input type="submit" value={response.isLoading?'Loading':"sign in"} className="bg-indigo-600 w-full p-3 rounded text-white uppercase font-semi-bold cursor-pointer" />

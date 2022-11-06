@@ -7,4 +7,12 @@
     .btn-dark{
          @apply bg-gray-900 px-4 py-3 capitalize font-medium;
     }
+    .form-control{
+        @apply bg-gray-900 p-3 rounded-sm outline-none w-full;
+    }
+    .btn-indigo{
+        @apply bg-indigo-600 text-white capitalize cursor-pointer font-medium px-4 py-3;
+    }
 }
+
+
