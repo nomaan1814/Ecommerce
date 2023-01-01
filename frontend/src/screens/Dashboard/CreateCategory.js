@@ -4,6 +4,8 @@ import Wrapper from './Wrapper'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState,useEffect } from 'react'
 import { useCreateMutation } from '../../store/services/categoryService'
+import { setSuccess } from '../../store/reducers/globalReducer'
+import { useDispatch } from 'react-redux'
 
 const CreateCategory = () => {
    const [state, setState] = useState('');
@@ -14,8 +16,10 @@ const CreateCategory = () => {
       saveCategory({ name: state })
    }
    const navigate=useNavigate();
+   const dispatch=useDispatch();
    useEffect(()=>{
        if(data.isSuccess){
+           dispatch(setSuccess(data?.data?.message))
            navigate('/dashboard/categories')
        }
    },[data?.isSuccess])

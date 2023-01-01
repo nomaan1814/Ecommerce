@@ -8,7 +8,7 @@ class category{
             const exist=await categoryModel.findOne({name});
             if(!exist){
                  await categoryModel.create({name});
-                 return res.status(201).json({message:'Category has created'})
+                 return res.status(201).json({message:'Your category has created successfully'})
             }else{
                 return res.status(401).json({errors:[{msg:`${name} is already exist`}]})
             }
